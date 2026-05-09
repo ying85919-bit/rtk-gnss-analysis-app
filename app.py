@@ -459,20 +459,20 @@ def make_figures(epoch_df: pd.DataFrame, output_dir: Path) -> dict[str, Path]:
             markersize=2.8,
             alpha=0.95,
         )
-    ax1.set_xlabel("Observation Time", fontsize=11)
-    ax1.set_ylabel("Satellite Count", fontsize=11)
-   ax1.set_title("Satellite Count by Station", fontsize=15, fontweight="bold", pad=16)
-    ax1.grid(True, linestyle="--", linewidth=0.7, alpha=0.35, color="#8ecae6")
-    ax1.legend(loc="best", frameon=True, fancybox=True, framealpha=0.9)
-    for spine in ax1.spines.values():
-        spine.set_color("#f0b6d5")
-        spine.set_linewidth(1.1)
-    plt.setp(ax1.get_xticklabels(), rotation=30, ha="right")
-    fig1.tight_layout()
-    path1 = output_dir / "satellite_count_by_station.png"
-    fig1.savefig(path1, dpi=220, bbox_inches="tight", facecolor=fig1.get_facecolor())
-    fig_paths["卫星数量变化图"] = path1
-    plt.close(fig1)
+        ax1.set_xlabel("Observation Time", fontsize=11)
+        ax1.set_ylabel("Satellite Count", fontsize=11)
+        ax1.set_title("Satellite Count by Station", fontsize=15, fontweight="bold", pad=16)
+        ax1.grid(True, linestyle="--", linewidth=0.7, alpha=0.35, color="#8ecae6")
+        ax1.legend(loc="best", frameon=True, fancybox=True, framealpha=0.9)
+        for spine in ax1.spines.values():
+            spine.set_color("#f0b6d5")
+            spine.set_linewidth(1.1)
+        plt.setp(ax1.get_xticklabels(), rotation=30, ha="right")
+        fig1.tight_layout()
+        path1 = output_dir / "satellite_count_by_station.png"
+        fig1.savefig(path1, dpi=220, bbox_inches="tight", facecolor=fig1.get_facecolor())
+        fig_paths["卫星数量变化图"] = path1
+        plt.close(fig1)
 
     available_system_cols = [c for c in SYSTEM_COLS if c in epoch_df.columns]
     if available_system_cols:
