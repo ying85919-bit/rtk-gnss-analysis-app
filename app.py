@@ -459,9 +459,9 @@ def make_figures(epoch_df: pd.DataFrame, output_dir: Path) -> dict[str, Path]:
             markersize=2.8,
             alpha=0.95,
         )
-    ax1.set_xlabel("观测时间", fontsize=11)
-    ax1.set_ylabel("卫星总数", fontsize=11)
-    ax1.set_title("各测站卫星数量变化", fontsize=15, fontweight="bold", pad=16)
+    ax1.set_xlabel("Observation Time", fontsize=11)
+    ax1.set_ylabel("Satellite Count", fontsize=11)
+   ax1.set_title("Satellite Count by Station", fontsize=15, fontweight="bold", pad=16)
     ax1.grid(True, linestyle="--", linewidth=0.7, alpha=0.35, color="#8ecae6")
     ax1.legend(loc="best", frameon=True, fancybox=True, framealpha=0.9)
     for spine in ax1.spines.values():
@@ -481,9 +481,9 @@ def make_figures(epoch_df: pd.DataFrame, output_dir: Path) -> dict[str, Path]:
         fig2.patch.set_facecolor("#f2fbff")
         ax2.set_facecolor("#ffffff")
         system_avg.plot(kind="bar", ax=ax2, color=palette[: len(available_system_cols)], width=0.78)
-        ax2.set_xlabel("测站", fontsize=11)
-        ax2.set_ylabel("平均卫星数量", fontsize=11)
-        ax2.set_title("不同卫星系统平均观测数量", fontsize=15, fontweight="bold", pad=16)
+        ax2.set_xlabel("Station", fontsize=11)
+        ax2.set_ylabel("Average Satellite Count", fontsize=11)
+        ax2.set_title("Average Satellite Count by GNSS System", fontsize=15, fontweight="bold", pad=16)
         ax2.grid(axis="y", linestyle="--", linewidth=0.7, alpha=0.35, color="#8ecae6")
         ax2.legend(loc="best", frameon=True, fancybox=True, framealpha=0.9)
         for spine in ax2.spines.values():
