@@ -937,11 +937,10 @@ def render_file_list(title: str, files: list[Path], icon: str = "📄") -> None:
 
 
 def render_chart_card(name: str, path: Path, note: str) -> None:
-    st.markdown('<div class="chart-card">', unsafe_allow_html=True)
     st.markdown(f"### {name}")
     st.caption(note)
     st.image(str(path), use_container_width=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
 
 
 def main() -> None:
