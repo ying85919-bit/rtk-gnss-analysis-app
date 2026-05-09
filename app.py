@@ -867,7 +867,6 @@ def render_hero() -> None:
   <div class="hero-title">🛰️ {APP_TITLE}</div>
   <div class="hero-subtitle">
     上传外业原始数据与内业处理成果，程序会自动完成测站识别、RINEX 观测统计、同步环检核提取与成果分析。<br>
-    粉蓝撞色版界面更适合展示与截图，核心分析逻辑保持不变。
   </div>
 </div>
 <div class="feature-grid">
