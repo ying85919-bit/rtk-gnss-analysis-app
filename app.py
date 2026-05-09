@@ -671,6 +671,38 @@ def inject_cute_css() -> None:
     --card: rgba(255, 255, 255, 0.88);
 }
 
+/* 隐藏 Streamlit 顶部默认栏 */
+[data-testid="stHeader"] {
+    display: none;
+}
+
+[data-testid="stToolbar"] {
+    display: none;
+}
+
+[data-testid="stDecoration"] {
+    display: none;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+/* 压缩页面顶部空白 */
+.block-container {
+    padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
+}
+
+/* 调整首页封面与顶部距离 */
+.hero-section {
+    margin-top: 0rem !important;
+}
+
 .stApp {
     background:
         radial-gradient(circle at 8% 10%, rgba(255, 111, 174, 0.18), transparent 30%),
